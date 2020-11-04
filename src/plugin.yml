@@ -1,0 +1,8 @@
+main: dev.krishaayjois.teleport.Main
+name: Teleport
+version: 1.0
+author: Krishaay Jois
+commands:
+  Move:
+    aliases: mv
+    description: Allows a player to teleport to another player with operator permissions
