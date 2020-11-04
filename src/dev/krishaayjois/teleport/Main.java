@@ -31,6 +31,11 @@ public class Main extends JavaPlugin {
             }
             String targetPlayerUsername = args[0];
             Player targetPlayer = Bukkit.getServer().getPlayer(targetPlayerUsername);
+            if (targetPlayer == null) {
+            	player.sendMessage(ChatColor.RED + "Please mention a valid username");
+            	return true;
+            }
+            
             player.teleport(targetPlayer);
             player.sendMessage(ChatColor.GREEN + "Teleported to " + targetPlayerUsername);
             targetPlayer.sendMessage(ChatColor.YELLOW + player.getName() + " teleported to you");
